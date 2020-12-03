@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard track-logistic</title>
-
+    <link rel="icon" href="../img/icon.png">
     <!--STYLESHEET-->
+    <!--=================================================-->
+
+<!--STYLESHEET-->
     <!--=================================================-->
 
     <!--Open Sans Font [ OPTIONAL ]-->
@@ -79,10 +81,9 @@
     <link href="../plugins/themify-icons/themify-icons.min.css" rel="stylesheet">
     <!--Premium Line Icons [ OPTIONAL ]-->
     <link href="../premium/icon-sets/icons/line-icons/premium-line-icons.min.css" rel="stylesheet">
+   
 
-    <!--js para handler de usuario -->
-    <script src="../js/comunas/loadData.js"></script>
-
+    <script src="../js/clients/loadData.js"></script>
 </head>
 
 <!--TIPS-->
@@ -98,7 +99,6 @@
                 <!--Brand logo & name-->
                 <!--================================-->
                 <div class="navbar-header">
-                  
                     <a href="../" class="navbar-brand">
                         <img src="../img/logo.png" alt="Nifty Logo" class="brand-icon">
                         <div class="brand-title">
@@ -136,7 +136,7 @@
                                     <!--<img class="img-circle img-user media-object" src="img/profile-photos/1.png" alt="Profile Picture">-->
                                     <i class="demo-pli-male"></i>
                                 </span>
-                                <div class="username hidden-xs">Administración</div>
+                                <div class="username hidden-xs">Administrador</div>
                             </a>
 
 
@@ -165,54 +165,65 @@
 
         <div class="boxed">
 
-          <!--CONTENT CONTAINER-->
-          <!--===================================================-->
-          <div id="content-container">
-              <div id="page-head">
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content-container">
+                <div id="page-head">
 
-                  <!--Page Title-->
-                  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                  <div id="page-title">
-                      <h1 class="page-header text-overflow">Comunas registradas en el sistema</h1>
+                    <!--Page Title-->
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <div id="page-title">
+                        <h1 class="page-header text-overflow">Clientes registrados en el sistema</h1>
 
-                  </div>
-                  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-                  <!--End page title-->
-              </div>
+                    </div>
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <!--End page title-->
+                </div>
 
 
-              <!--Page content-->
-              <!--===================================================-->
-              <div id="page-content">
-                <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="panel">
-                      <div id="demo-custom-toolbar2" class="table-toolbar-left">
-                          <button id="demo-dt-addrow-btn" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="demo-pli-plus"></i> Agregar Comuna</button>
-                      </div>
+                <!--Page content-->
+                <!--===================================================-->
+                <div id="page-content">
 
-                      <div class="panel-body">
-                        <table id="choferes_data" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                          <thead>
-                            <tr>
-                              <th class="min-tablet">Nombre Comuna</th>                              
-                              <th class="min-tablet">Fecha creación</th>
-                              <th class="min-tablet">Fecha edición</th>
-                              <th class="min-tablet">Opciones</th>
-                              </tr>
-                            </thead>
-                          </table>
+                  <div class="row">
+                    
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                      <div class="panel">
+
+                        <div id="demo-custom-toolbar2" class="table-toolbar-left">
+                          <button id="demo-dt-addrow-btn" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="demo-pli-plus"></i> Agregar Cliente</button>
+                        </div>                      
+                        <div class="panel-body">
+                          <table id="clientes_data" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                              <tr>
+                                <th class="min-tablet">Nombre Cliente</th>
+                                <th class="min-tablet">Contacto</th>
+                                <th class="min-tablet">Teléfono</th>
+                                <th class="min-tablet">Email</th>
+                                <th class="min-tablet">Username</th>
+                                <th class="min-tablet">Password</th>
+                                <th class="min-tablet">Status</th>
+                                <th class="min-tablet">Creado</th>
+                                <th class="min-tablet">Modificado</th>
+                                <th class="min-tablet">Opciones</th>
+                                </tr>
+                              </thead>
+                            </table>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </div>          
                 </div>
-              </div>
-              <!--===================================================-->
-              <!--End page content-->
+                <!--===================================================-->
+                <!--End page content-->
+      </div>
+            <!--===================================================-->
+            <!--END CONTENT CONTAINER-->
 
-          </div>
-          <!--===================================================-->
-          <!--END CONTENT CONTAINER-->
+
+
+
 
 
             <!--MAIN NAVIGATION-->
@@ -250,10 +261,20 @@
 
                                 <ul id="mainnav-menu" class="list-group">
 
+                                  <li class="list-header">Clientes</li>
+
+                                  <li class="active-sub">
+                                      <a href="../clients/">
+                                          <i class="fa fa-user-secret"></i>
+                                          <span class="menu-title">Clientes</span><i class="arrow"></i>
+                                      </a>
+
+                                  </li>
+
                                   <li class="list-header">Repartos y Destinos</li>
 
                                   <li>
-                                      <a href=../comunas/>
+                                      <a href="../comunas/">
                                           <i class="fa fa-map"></i>
                                           <span class="menu-title">Comunas</span><i class="arrow"></i>
                                       </a>
@@ -284,7 +305,7 @@
                                           <span class="menu-title">Generar Reportes</span><i class="arrow"></i>
                                       </a>
 
-                                  </li> 
+                                  </li>
 
                                   <li>
                                       <a href="../personalized_report">
@@ -292,7 +313,7 @@
                                           <span class="menu-title">Reportes Personalizados</span><i class="arrow"></i>
                                       </a>
 
-                                  </li>                        
+                                  </li>                          
                         </ul>
 
                     <!--================================-->
@@ -348,27 +369,74 @@
     <!--===================================================-->
     <!-- END OF CONTAINER -->
 
-    <!-- modal section -->
-    <!-- modal para agregar-->
-     <div class="modal fade" id="myModal" role="dialog" tabindex="-1" aria-labelledby="demo-default-modal" aria-hidden="true">
+  <!-- modal section -->
+  <div class="modal fade" id="myModal" role="dialog" tabindex="-1" aria-labelledby="demo-default-modal" aria-hidden="true">
          <div class="modal-dialog">
            <div class="modal-content">
              <div class="modal-header">
                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-               <h4 class="modal-title" id="myModalLabel">Agregar Nueva Comuna</h4>
+               <h4 class="modal-title" id="myModalLabel">Agregar Nuevo Cliente</h4>
              </div>
              <div class="modal-body">
 
              <form id="frmAgregar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
                <div class="form-group">
-                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nombre Comuna<span class="required">*</span>
+                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nombre Cliente<span class="required">*</span>
                  </label>
 
                  <div class="col-md-9 col-sm-9 col-xs-12">
-                   <input type="text" id="name" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese nombre de la comuna">
+                   <input type="text" id="name" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese nombre del chofer">
                  </div>
                </div>               
 
+               <div class="form-group">
+                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nombre_contacto">Nombre de Contacto  <span class="required">*</span>
+                 </label>
+
+                 <div class="col-md-9 col-sm-9 col-xs-12">
+                   <input type="text" id="nombre_contacto" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese nombre de contacto">
+                 </div>
+               </div>
+
+               <div class="form-group">
+                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="username">Nombre de Usuario  <span class="required">*</span>
+                 </label>
+
+                 <div class="col-md-9 col-sm-9 col-xs-12">
+                   <input type="text" id="username" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese nombre de usuario">
+                 </div>
+               </div>
+
+               <div class="form-group">
+                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password">Contraseña  <span class="required">*</span>
+                 </label>
+
+                 <div class="col-md-9 col-sm-9 col-xs-12">
+                   <input type="text" id="password" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese contraseña para el usuario">
+                 </div>
+               </div>
+
+                
+                <div class="form-group">
+                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email de contacto  <span class="required">*</span>
+                 </label>
+
+                 <div class="col-md-9 col-sm-9 col-xs-12">
+                   <input type="text" id="email" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese email de contacto">
+                 </div>
+               </div>
+
+
+               <div class="form-group">
+                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telefono">Teléfono  <span class="required">*</span>
+                 </label>
+
+                 <div class="col-md-9 col-sm-9 col-xs-12">
+                   <input type="text" id="telefono" required="required" class="form-control col-md-7 col-xs-12" placeholder="Telefono formato ejemplo: +569 99887766">
+                 </div>
+               </div>          
+
+               
                <div class="ln_solid"></div>
              </div>
 
@@ -376,7 +444,7 @@
                <div class="form-group">
                  <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                    <button type="reset" class="btn btn-primary">Resetear</button>
-                   <button type="button" id="agregar-chofer" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                   <button type="button" id="agregar-cliente" class="btn btn-success" data-dismiss="modal">Aceptar</button>
                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                  </div>
                </div>
@@ -386,23 +454,23 @@
        </form>
      </div>
 
-     <!-- modal para eliminar -->
+       <!-- modal para eliminar -->
      <div>
        <form id="frmEliminar" action="" method="POST">
-         <input type="hidden" id="idcomuna" name="idcomuna" value="">
+         <input type="hidden" id="idclient" name="idclient" value="">
          <!-- Modal -->
          <div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
            <div class="modal-dialog" role="document">
              <div class="modal-content">
                <div class="modal-header">
                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                 <h4 class="modal-title" id="modalEliminarLabel">Eliminar Comuna</h4>
+                 <h4 class="modal-title" id="modalEliminarLabel">Eliminar Cliente</h4>
                </div>
                <div class="modal-body">
-                 ¿Está seguro de eliminar la comuna seleccionada?<strong data-name=""></strong>
+                 ¿Está seguro de eliminar el cliente seleccionado?<strong data-name=""></strong>
                </div>
                <div class="modal-footer">
-                 <button type="button" id="eliminar-chofer" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                 <button type="button" id="eliminar-cliente" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                </div>
              </div>
@@ -412,43 +480,102 @@
        </form>
      </div>
 
-     <!-- modal para editar un nuevo elemento -->
-     <div>
-      <form id="frmEditar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
-        <input type="hidden" id="idcomuna" name="idcomuna" value="">
-        <div class="modal fade" id="myModalEditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEdit" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <h4 class="modal-title" id="myModalLabelEdit">Editar Comuna</h4>
-                </div>
-                <div class="modal-body">
+  <div class="modal fade" id="myModalEditar" role="dialog" tabindex="-1" aria-labelledby="demo-default-modal" aria-hidden="true">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+               <h4 class="modal-title" id="myModalLabel">Editar Cliente</h4>
+             </div>
+             <div class="modal-body">
 
-                  <div class="form-group">
-                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nombre <span class="required">*</span>
+             <form id="frmEditar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
+              <input type="hidden" id="idclient" name="idclient" value="">
+
+
+               <div class="form-group">
+                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nombre Cliente<span class="required">*</span>
                  </label>
 
                  <div class="col-md-9 col-sm-9 col-xs-12">
                    <input type="text" id="name" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese nombre del chofer">
                  </div>
+               </div>               
+
+               <div class="form-group">
+                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nombre_contacto">Nombre de Contacto  <span class="required">*</span>
+                 </label>
+
+                 <div class="col-md-9 col-sm-9 col-xs-12">
+                   <input type="text" id="nombre_contacto" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese nombre de contacto">
+                 </div>
                </div>
-               
-                  <div class="ln_solid"></div>
-                  <div class="form-group">
-                    <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                      <button type="reset" class="btn btn-primary">Resetear</button>
-                      <button type="button" id="editar-chofer" class="btn btn-success" data-dismiss="modal">Editar</button>
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                    </div>
-                  </div>
 
+               <div class="form-group">
+                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="username">Nombre de Usuario  <span class="required">*</span>
+                 </label>
+
+                 <div class="col-md-9 col-sm-9 col-xs-12">
+                   <input type="text" id="username" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese nombre de usuario">
+                 </div>
+               </div>
+
+               <div class="form-group">
+                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password">Contraseña  <span class="required">*</span>
+                 </label>
+
+                 <div class="col-md-9 col-sm-9 col-xs-12">
+                   <input type="text" id="password" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese contraseña para el usuario">
+                 </div>
+               </div>
+
+                
+                <div class="form-group">
+                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email de contacto  <span class="required">*</span>
+                 </label>
+
+                 <div class="col-md-9 col-sm-9 col-xs-12">
+                   <input type="text" id="email" required="required" class="form-control col-md-7 col-xs-12" placeholder="Ingrese email de contacto">
+                 </div>
+               </div>
+
+
+               <div class="form-group">
+                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telefono">Teléfono  <span class="required">*</span>
+                 </label>
+
+                 <div class="col-md-9 col-sm-9 col-xs-12">
+                   <input type="text" id="telefono" required="required" class="form-control col-md-7 col-xs-12" placeholder="Telefono formato ejemplo: +569 99887766">
+                 </div>
+               </div>
+
+              <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="status_client">Estado Cliente<span class="required">*</span>
+                </label>
+
+                  <div class="col-md-9 col-sm-9 col-xs-12">                        
+                    <select id="status_client" class="form-control" required>
+                      <option >ACTIVO</option>
+                      <option >NO ACTIVO</option>                      
+
+                  </select>                      
                 </div>
-
               </div>
-            </div>
-          </form>
-        </div>
-     </div>
-  </body>
+               <div class="ln_solid"></div>
+             </div>
+
+             <div class="modal-footer">
+               <div class="form-group">
+                 <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                   <button type="reset" class="btn btn-primary">Resetear</button>
+                   <button type="button" id="editar-cliente" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                   <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </form>
+     </div>     
+</body>
 </html>

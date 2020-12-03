@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard track-logistic</title>
-
+    <link rel="icon" href="../img/icon.png">
+    
     <!--STYLESHEET-->
     <!--=================================================-->
 
@@ -351,6 +352,16 @@
                                 </div>
 
                                 <ul id="mainnav-menu" class="list-group">
+
+                                  <li class="list-header">Clientes</li>
+
+                                  <li class="active-sub">
+                                      <a href="../clients/">
+                                          <i class="fa fa-user-secret"></i>
+                                          <span class="menu-title">Clientes</span><i class="arrow"></i>
+                                      </a>
+
+                                  </li>
 
                                   <li class="list-header">Repartos y Destinos</li>
 
