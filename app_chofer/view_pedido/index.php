@@ -189,7 +189,7 @@
                                 <div id="mainnav-profile" class="mainnav-profile">
                                     <div class="profile-wrap text-center">
                                         <div class="pad-btm">
-                                            <img class="img-circle img-md" src="../img/profile-photos/11.png" alt="Profile Picture">
+                                            <img class="img-circle img-md" src="../img/profile-photos/3.png" alt="Profile Picture">
                                         </div>
                                         <a href="#profile-nav" class="box-block" data-toggle="collapse" aria-expanded="false">                                            
                                             <p class="mnp-name">Chofer</p>
