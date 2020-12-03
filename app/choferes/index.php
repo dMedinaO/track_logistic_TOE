@@ -84,6 +84,8 @@
    
 
     <script src="../js/choferes/loadData.js"></script>
+    <script src="../js/choferes/load_client.js"></script>
+
 </head>
 
 <!--TIPS-->
@@ -203,7 +205,7 @@
                                 <th class="min-tablet">Estrellas</th>
                                 <th class="min-tablet">Observaciones</th>
                                 <th class="min-tablet">Fecha Ingreso</th>
-                                <th class="min-tablet">Fecha Modificación</th>
+                                <th class="min-tablet">Cliente</th>
                                 <th class="min-tablet">Opciones</th>
                                 </tr>
                               </thead>
@@ -261,7 +263,7 @@
 
                                   <li class="list-header">Clientes</li>
 
-                                  <li class="active-sub">
+                                  <li>
                                       <a href="../clients/">
                                           <i class="fa fa-user-secret"></i>
                                           <span class="menu-title">Clientes</span><i class="arrow"></i>
@@ -422,6 +424,19 @@
                     <textarea class="form-control" id="observaciones" rows="4"></textarea>
                  </div>
                </div>
+
+               <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="idclient">Seleccione Cliente <span class="required">*</span>
+                    </label>
+
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                    <div class="selector-client">
+                      <select id="idclient" class="form-control" required>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
                <div class="ln_solid"></div>
              </div>
 

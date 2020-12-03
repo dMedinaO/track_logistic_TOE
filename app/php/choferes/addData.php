@@ -7,11 +7,12 @@
 	$rut = $_REQUEST['rut'];	
 	$telefono = $_REQUEST['telefono'];	
 	$date = $_REQUEST['date'];
-	$observaciones = $_REQUEST['observaciones'];	
+	$observaciones = $_REQUEST['observaciones'];
+	$idclient = $_REQUEST['idclient'];
 	
 	$id = time();
 
-	$query = "insert into chofer values ($id, '$name', '$rut', STR_TO_DATE('$date', '%Y-%m-%d'), NOW(), '$telefono', 0, 0, '$observaciones')";
+	$query = "insert into chofer values ($id, '$name', '$rut', STR_TO_DATE('$date', '%Y-%m-%d'), NOW(), '$telefono', 0, 0, '$observaciones', $idclient)";
 
 	$resultado = mysqli_query($conexion, $query);
 	$informacion = verificar_resultado( $resultado, $conexion, $query);

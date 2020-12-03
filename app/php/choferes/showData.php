@@ -3,7 +3,7 @@
 	#script para hacer la carga de informacion desde la base de datos a la tabla
 	include ("../connection.php");
 
-	$query = "select idchofer, nombre_chofer, rut_chofer, estrellas, observaciones, DATE_FORMAT(created_chofer, '%Y-%m-%d') as created_chofer, edited_chofer, telefono from chofer";
+	$query = "select idchofer, nombre_chofer, rut_chofer, estrellas, observaciones, DATE_FORMAT(created_chofer, '%Y-%m-%d') as created_chofer, edited_chofer, telefono, nombre_client from chofer  join client on client.idclient = chofer.client";
 	$resultado = mysqli_query($conexion, $query);
 
 	if (!$resultado){

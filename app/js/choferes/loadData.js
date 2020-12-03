@@ -156,6 +156,7 @@ $(window).on('load', function() {
 			var telefono = $("#frmAgregar #telefono").val();
 			var date = $("#frmAgregar #date").val();
 			var observaciones = $("#frmAgregar #observaciones").val();
+			var idclient = $("#frmAgregar #idclient").val();
 
 			$.ajax({
 				method: "POST",
@@ -165,7 +166,8 @@ $(window).on('load', function() {
 						"rut"   : rut,
 						"telefono" : telefono,
 						"date" : date,
-						"observaciones" : observaciones
+						"observaciones" : observaciones,
+						"idclient" : idclient
 					}
 
 			}).done( function( info ){

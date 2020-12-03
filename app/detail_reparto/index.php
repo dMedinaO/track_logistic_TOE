@@ -254,7 +254,7 @@
 
                                   <li class="list-header">Clientes</li>
 
-                                  <li class="active-sub">
+                                  <li>
                                       <a href="../clients/">
                                           <i class="fa fa-user-secret"></i>
                                           <span class="menu-title">Clientes</span><i class="arrow"></i>
