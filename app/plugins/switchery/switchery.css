@@ -61,3 +61,7 @@
     height: 30px;
     width: 30px;
 }
+.switchery{
+    background-color: #afafaf !important;
+    border-color: transparent !important;
+}

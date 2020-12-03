@@ -359,7 +359,7 @@
 
                                   </li>
                                   
-                                  <li>
+                                  <li class="active-sub">
                                       <a href="../informes">
                                           <i class="fa fa-file"></i>
                                           <span class="menu-title">Generar Reportes</span><i class="arrow"></i>

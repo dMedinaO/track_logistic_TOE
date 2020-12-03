@@ -388,7 +388,7 @@
 
                                   </li>
 
-                                  <li>
+                                  <li class="active-sub">
                                       <a href="../personalized_report">
                                           <i class="fa fa-cogs"></i>
                                           <span class="menu-title">Reportes Personalizados</span><i class="arrow"></i>

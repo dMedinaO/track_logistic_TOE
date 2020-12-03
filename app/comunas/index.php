@@ -252,7 +252,7 @@
 
                                   <li class="list-header">Repartos y Destinos</li>
 
-                                  <li>
+                                  <li class="active-sub">
                                       <a href=../comunas/>
                                           <i class="fa fa-map"></i>
                                           <span class="menu-title">Comunas</span><i class="arrow"></i>

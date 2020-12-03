@@ -272,69 +272,30 @@ input{
     display: none;
 }
 @media (min-width: 1200px){
-    .demo-set{
-        background-color: rgba(0,0,0,.0);
-        color: #5e5e5e;
-        display: block;
+
+    .demo-nifty-settings{
         position: fixed;
-        left: 0;
+        top: 20px;
         right: 0;
-        top: 0;
-        bottom: 0;
         z-index: 99999;
-        direction: rtl;
-        visibility: hidden;
-        transition: background-color .3s
-    }
-    #demo-set-btn{
-        display: inline-block
-    }
-    .demo-set.in{
-        visibility: visible;
-        background-color: rgba(0,0,0, .45);
-        transition: background-color .3s
-    }
-    .effect ~  .demo-set .collapsing{
-        transition-duration: 0 !important
-    }
-    .demo-set .mar-btm{
-        margin-bottom: 10px
-    }
-    .demo-set-body > .demo-set-content{
-        padding: 10px 5px 20px;
-    }
-    .demo-set-body .icon-wrap{
-        padding: 7px
-    }
-    .demo-set-body{
-        background-color: #fff;
-        border-left: 7px solid #34495e;
-        position: relative;
-        direction: ltr;
-        margin-top: 10px;
         max-width: 1120px;
-        max-height: 600px;
-        z-index: 999;
-        transform: translateX(1120px);
-        transition: all .3s
+        max-height: 700px;
+        background-color: #fff;
     }
-    .demo-set.in .demo-set-body{
-        transform: translateX(0);
-        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
-        transition: all .3s;
-    }
+
     #demo-set-btn{
-        background-color: #34495e;
+        display: inline-block;
+        background-color: #3a444e;
         border-radius: 7px 0 0 7px !important;
         color: #fff;
         border: 0;
-        position: fixed;
-        right: 0%;
-        top : 100px;
-        margin-left: -48px;
+        position: absolute;
+        top : 250px;
+        left: -45px;
+        margin-left: -1%;
         border-radius: 2px 0 0 2px;
         box-shadow: none;
-        z-index: 99999;
+        z-index: 1;
         transition: all .3s;
     }
     #demo-set-btn i {
@@ -350,12 +311,68 @@ input{
         display: block;
         line-height: 1em
     }
-    .demo-set.in + #demo-set-btn{
-        right: 1120px;
-        transition: all .3s;
+    .demo-set-content{
+        position: relative;
+        background-color: #fff;
+        box-shadow: -7px 0 0 #3a444e;
+        z-index: 2;
+        max-width: 0;
+        overflow: hidden;
+        height: 560px;
+        transition: max-width .15s;
     }
-    .demo-set.in + #demo-set-btn i{
-        animation-play-state: paused
+    .demo-nifty-settings.in .demo-set-content{
+        transition: max-width .15s;
+        max-width: 1120px;
+    }
+    .demo-nifty-settings:before{
+        content: ''   ;
+        background-color: rgba(0,0,0,0);
+        transition: background-color .4s;
+    }
+    .demo-nifty-settings.in:before{
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,.5);
+        transition: background-color .4s;
+    }
+
+    .demo-settings-load{
+        position: relative;
+        top: 50%;
+        padding: 25px;
+        text-align: center;
+        transform: translateY(-50%)
+    }
+
+    .demo-theme-btn img{
+        width: 104px;
+        height: 64px
+    }
+    .demo-nifty-settings hr,
+    .demo-nifty-settings .bord-btm,
+    .demo-nifty-settings .bord-top,
+    .demo-nifty-settings .bord-all{
+        border-color: rgba(0,0,0,0.07);
+    }
+
+    .demo-nifty-settings{
+        color: #7a878e
+    }
+    .demo-nifty-settings .text-muted{
+        color: #909ba1;
+    }
+    .demo-nifty-settings .text-main{
+        color: #4d627b
+    }
+    .demo-nifty-settings .select select{
+        background-color: #fff;
+        color: #909ba1;
+        border-color: rgba(0,0,0,0.07);
     }
 }
 
@@ -375,7 +392,7 @@ input{
     bottom: 0;
     padding: 10px 20px;
     background-color: #f8f9fa;
-    z-index: 2
+    z-index: 200
 }
 .demo-bg-boxed-content{
     max-height: 380px;
@@ -422,34 +439,43 @@ input{
     display: inline-block;
     width: 100%
 }
-
+.demo-full-theme .media{
+    overflow: visible
+}
 .demo-theme{
     cursor: pointer !important;
     display: inline-block;
     width: 33.3%;
-    height: 32px;
+    height: 29px;
     background-color: #f4f4f4;
     position: relative;
     transition: all .2s
 }
+.demo-srow-scheme .demo-justify-theme{
+    margin-top: 25px
+}
+.demo-srow-scheme .demo-theme{
+    width: 16.65%;
+    height: 30px
+}
 .demo-theme:hover{
     box-shadow: 0 0 10px 2px rgba(0, 0, 0,0.3);
     border: 0;
-    transition: all .2s
+    transform: scale(1.1);
+    transition: all .2s;
+    z-index: 100
 }
 .demo-theme.active{
     cursor: not-allowed!important;
     opacity:  .8;
     z-index: 99;
-    box-shadow: 0 0 0 2px #fff;
-    transform: scale(.95);
-    border-radius: 2px
+    transform: scale(1)
 }
 .demo-theme.active:before {
     background: #fff;
     content: "";
     height: 10px;
-    left: 50%;
+    left: 45%;
     margin-left: -5px;
     position: absolute;
     top: 13px;
@@ -461,7 +487,7 @@ input{
     background: #fff;
     content: "";
     height: 20px;
-    left: 50%;
+    left: 45%;
     margin-left: 3px;
     position: absolute;
     top: 5px;
@@ -489,7 +515,7 @@ input{
     background: #807362;
 }
 .demo-theme-dark{
-    background: #424a52
+    background: #3a444e
 }
 .demo-theme-dust{
     background: #fd8943;
@@ -531,27 +557,34 @@ input{
 
 
 .demo-show-grid .row{
-    margin-bottom: 20px
+    margin: 0 0 20px;
+
 }
 .demo-show-grid [class^="col-"] {
     padding-top: 10px;
     padding-bottom: 10px;
     min-height: 70px;
-    border: 1px solid #adc8db;
-    color: #4d627b;
-    background-color: #cee5f5 !important;
+    border: 1px solid rgba(109,171,213,0.28);
+    color: inherit;
+    background-color: rgba(109,171,213,0.18) !important;
 }
 
+.demo-liquid-fixed .fixed-fluid{
+    margin: 0
+}
 .demo-liquid-fixed [class^="fixed-"]:not(.fixed-fluid),
 .demo-liquid-fixed .fluid{
     padding: 10px;
     height: 150px;
-    background: #c2f6c2;
-    border: 1px solid #9ed89e;
-    color: #4d627b;
+    background: rgba(109,213,117, .25);
+    border: 1px solid rgba(109,213,117, .45);
+    color: inherit;
     margin-bottom: 15px;
 }
 .demo-liquid-fixed .fluid{
-    background: #cee5f5;
-    border: 1px solid #adc8db;
+    background: rgba(109,171,213,0.18);
+    border: 1px solid rgba(109,171,213,0.28);
+    color: inherit
 }
+
+

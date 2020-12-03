@@ -200,7 +200,7 @@
                                   <a href="#" class="add-tooltip btn btn-trans" data-original-title="Favorite"><span class="favorite-color"><i class="demo-psi-star icon-lg"></i></span></a>                                  
                               </div>
                               <a href="#">
-                                  <img alt="Profile Picture" class="img-lg img-circle mar-ver" src="../img/profile-photos/3.png">
+                                  <img alt="Profile Picture" class="img-lg img-circle mar-ver" src="../img/profile-photos/2.png">
                                   <p class="text-lg text-semibold mar-no text-main user_name2"></p>
                                   <p class="text-md entregados_r2"></p>
                                   <p class="text-md pendientes_r2"></p>  
@@ -225,7 +225,7 @@
                                   <a href="#" class="add-tooltip btn btn-trans" data-original-title="Favorite"><span class="favorite-color"><i class="demo-psi-star icon-lg"></i></span></a>                                  
                               </div>
                               <a href="#">
-                                  <img alt="Profile Picture" class="img-lg img-circle mar-ver" src="../img/profile-photos/5.png">
+                                  <img alt="Profile Picture" class="img-lg img-circle mar-ver" src="../img/profile-photos/3.png">
                                   <p class="text-lg text-semibold mar-no text-main user_name1"></p>
                                   <p class="text-md entregados_r1"></p>
                                   <p class="text-md pendientes_r1"></p>  
@@ -353,7 +353,7 @@
 
                                   <li class="list-header">Estadísticas e Informes</li>
 
-                                  <li>
+                                  <li class="active-sub">
                                       <a href="../statistics">
                                           <i class="fa fa-bar-chart"></i>
                                           <span class="menu-title">Indicadores</span><i class="arrow"></i>
