@@ -144,7 +144,7 @@
 
                                 <!-- Dropdown footer -->
                                 <div class="pad-all text-right">
-                                    <a href="../closeConnection" class="btn btn-primary">
+                                    <a href="../../home" class="btn btn-primary">
                                         <i class="demo-pli-unlock"></i> Salir!
                                     </a>
                                 </div>

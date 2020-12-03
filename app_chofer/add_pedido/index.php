@@ -236,7 +236,7 @@
                                   </li>                          
 
                                    <li>
-                                      <a href="../../login">
+                                      <a href="../../home">
                                           <i class="demo-pli-unlock icon-lg icon-fw"></i>
                                           <span class="menu-title">Salir</span><i class="arrow"></i>
                                       </a>
